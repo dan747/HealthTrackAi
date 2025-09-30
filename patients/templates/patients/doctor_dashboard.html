@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Dashboard</title>
+</head>
+<body>
+    <h1>Doctor Dashboard</h1>
+    {% if doctor %}
+        <p>Welcome, Dr. {{ doctor.user.first_name }} {{ doctor.user.last_name }}</p>
+        <p>Specialization: {{ doctor.specialization }}</p>
+        <p>License: {{ doctor.license_number }}</p>
+        
+        <h3>Doctor Features:</h3>
+        <ul>
+            <li><a href="#">View Patients</a></li>
+            <li><a href="#">Write Prescriptions</a></li>
+            <li><a href="#">Manage Appointments</a></li>
+        </ul>
+    {% else %}
+        <p>No doctor profile found.</p>
+    {% endif %}
+    
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

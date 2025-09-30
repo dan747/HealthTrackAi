@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HealthTrackAI - Home</title>
+</head>
+<body>
+    <h1>Welcome to HealthTrackAI</h1>
+    <p>Your comprehensive healthcare management system</p>
+    
+    <div style="margin: 20px 0;">
+        <a href="{% url 'login' %}" style="padding: 10px 20px; background: #007bff; color: white; text-decoration: none;">Login</a>
+        <a href="{% url 'signup' %}" style="padding: 10px 20px; background: #28a745; color: white; text-decoration: none; margin-left: 10px;">Sign Up</a>
+    </div>
+    
+    <h3>Choose Your Role:</h3>
+    <ul>
+        <li><strong>Patients:</strong> Manage your health records and appointments</li>
+        <li><strong>Doctors:</strong> Access patient records and write prescriptions</li>
+        <li><strong>Pharmacies:</strong> Manage prescriptions and inventory</li>
+        <li><strong>Admins:</strong> System administration</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pharmacy Dashboard</title>
+</head>
+<body>
+    <h1>Pharmacy Dashboard</h1>
+    {% if pharmacy %}
+        <p>Welcome, {{ pharmacy.pharmacy_name }}</p>
+        <p>License: {{ pharmacy.license_number }}</p>
+        
+        <h3>Pharmacy Features:</h3>
+        <ul>
+            <li><a href="#">Manage Inventory</a></li>
+            <li><a href="#">Process Prescriptions</a></li>
+            <li><a href="#">View Orders</a></li>
+        </ul>
+    {% else %}
+        <p>No pharmacy profile found.</p>
+    {% endif %}
+    
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
